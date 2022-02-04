@@ -1,0 +1,28 @@
+{
+  "name": "wpromptjs",
+  "version": "1.0.0",
+  "description": "Readline but in the syntax of web prompt().",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jugoslavss/wprompt.git"
+  },
+  "keywords": [
+    "prompt",
+    "readline",
+    "cli",
+    "command line"
+  ],
+  "author": "Yugoslav Empire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jugoslavss/wprompt/issues"
+  },
+  "homepage": "https://github.com/jugoslavss/wprompt#readme"
+}

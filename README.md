@@ -1,13 +1,13 @@
 # Installation
 
 ```sh
-npm i wprompt
+npm i wpromptjs
 ```
 
 # Usage
 
 ```js
-const prompt = require("wprompt");
+const prompt = require("wpromptjs");
 
 (async () => {
   console.log(`Your name is ${await prompt("What is your name?")}.`);
@@ -18,7 +18,7 @@ const prompt = require("wprompt");
 ```
 
 ```js
-const { prompt, raw } = require("wprompt");
+const { prompt, raw } = require("wpromptjs");
 
 (async () => {
   console.log(`Your name is ${await prompt("What is your name? ", { raw })}.`);
@@ -28,7 +28,7 @@ const { prompt, raw } = require("wprompt");
 ```
 
 ```js
-const prompt = require("wprompt");
+const prompt = require("wpromptjs");
 
 (async () => {
   console.log(
