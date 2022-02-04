@@ -1,8 +1,9 @@
-declare module wpromptjs {
-  export default function (
+declare module "wpromptjs" {
+  function prompt(
     text: string,
     options: { raw: boolean; questioner: string }
   ): Promise<string>;
+  export = prompt;
   export function prompt(
     text: string,
     options: { raw: boolean; questioner: string }
