@@ -29,4 +29,4 @@ module.exports = function prompt(
 };
 
 module.exports.prompt = module.exports;
-module.exports.raw = true;
+module.exports.__defineGetter__("raw", () => true);
