@@ -1,6 +1,6 @@
 {
   "name": "wpromptjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Readline but in the syntax of web prompt().",
   "main": "index.js",
   "directories": {
