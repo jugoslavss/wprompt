@@ -1,12 +1,12 @@
 declare module "wpromptjs" {
-  function prompt(
+  var prompt: (
     text: string,
-    options: { raw: boolean; questioner: string }
-  ): Promise<string>;
+    options?: { raw?: boolean; questioner?: string }
+  ) => Promise<string>;
   export = prompt;
   export function prompt(
     text: string,
-    options: { raw: boolean; questioner: string }
+    options?: { raw?: boolean; questioner?: string }
   ): Promise<string>;
   export const raw: true;
 }
