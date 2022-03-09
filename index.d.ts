@@ -8,5 +8,5 @@ declare module "wpromptjs" {
     text: string,
     options?: { raw?: boolean; questioner?: string }
   ): Promise<string>;
-  export const raw: true;
+  export var raw: true;
 }

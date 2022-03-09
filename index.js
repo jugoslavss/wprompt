@@ -1,32 +1,19 @@
 module.exports = function prompt(
   text = "",
-  { raw = false, questioner = "> " } = { raw: false, questioner: "> " }
+  { raw = false, questioner = "> " } = {}
 ) {
-  if (raw) {
-    return new Promise((resl) => {
-      const Readline = require("readline").createInterface({
-        input: process.stdin,
-        output: process.stdout,
-      });
-      Readline.question(text, (res) => {
-        resl(res);
-        Readline.close();
-      });
+  return new Promise((resolve) => {
+    if (!raw) console.log(text);
+    const rl = require("readline").createInterface({
+      input: process.stdin,
+      output: process.stdout,
     });
-  } else {
-    return new Promise((resl) => {
-      console.log(text);
-      const Readline = require("readline").createInterface({
-        input: process.stdin,
-        output: process.stdout,
-      });
-      Readline.question(questioner, (res) => {
-        resl(res);
-        Readline.close();
-      });
+    rl.question(raw ? text : questioner, (answer) => {
+      resolve(answer);
+      rl.close();
     });
-  }
+  });
 };
 
 module.exports.prompt = module.exports;
-module.exports.__defineGetter__("raw", () => true);
+module.exports.raw = true;
